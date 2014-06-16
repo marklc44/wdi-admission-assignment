@@ -1,0 +1,77 @@
+/*
+-------------------------
+Bootstrap imports
+-------------------------
+*/
+/*@import "bootstrap/bootstrap.scss";*/
+/*@import "../bstrap/css/bootstrap-theme.min.css";*/
+
+/*
+-------------------------
+Partials
+-------------------------
+*/
+
+@import "bits";
+@import "typography";
+@import "nav";
+@import "single-page-site";
+@import "jumbotron";
+@import "filters";
+@import "projects";
+@import "rslider";
+@import "blog";
+@import "about";
+@import "contact-form";
+@import "footer";
+
+
+body {
+	background: $clouds;
+}
+.fullpage-content {
+	margin-top: 50px;
+}
+.admin-bar .navbar-fixed-top {
+	margin-top: 30px;
+	@media (max-width: 600px) {
+		margin-top: 0;
+	}
+}
+.grid-item {
+	margin-bottom: 30px;
+	max-width: 100%;
+	@include breakpoint(small) {
+		width: 100%;
+		img {
+			width: 100%;
+		}
+	}
+}
+.container {
+	width: 70%;
+	@include breakpoint(small) {
+		width: 90%;
+	}
+}
+
+.sidebar {
+	margin-top: 100px;
+}
+
+/*
+	Fix mobile safari click event bubbling
+*/
+.clickable {
+	cursor: pointer;
+}
+
+.bg-fade {
+	width: 100%;
+	height: 100%;
+	background: rgba(100,100,100,0.4);
+	position: absolute;
+	top:0;
+	left:0;
+	z-index: 9;
+}

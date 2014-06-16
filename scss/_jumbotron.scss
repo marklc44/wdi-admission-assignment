@@ -1,0 +1,88 @@
+.jumbotron {
+	background: white;
+	margin-bottom: 0;
+	color: #666;
+	@include breakpoint(small) {
+
+	}
+	.container {
+		@include breakpoint(small) {
+			width: 100%;
+			.portrait-wrapper {
+				display: none;
+			}
+			h1 {
+				font-size: 36px;
+			}
+			h2 {
+				font-size: 24px;
+			}
+		}
+		div[class*='col-'] {
+			@include breakpoint(small) {
+				width: 100%;
+				text-align: center;
+			}
+		}
+	}
+	.btn-primary {
+		background: $burnt-orange;
+		border-color: $tall-poppy;
+		&:hover {
+			background: lighten($burnt-orange, 10%);
+		}
+	}
+}
+.portrait-wrapper {
+	border-radius: 50%;
+	border: 8px solid $burnt-orange;
+	overflow: hidden;
+	height: 116px;
+	width: 116px;
+	img {
+		min-width: 100%;
+		min-height: 100%;
+
+	}
+}
+
+.img-bg {
+	background: url(../images/all-in-this-together-ink.png) center center no-repeat;
+	background-size: cover;
+}
+.aitt-large {
+	background: url(../images/aitt-3-1400.jpg) center center no-repeat;
+	background-size: cover;
+	color: white;
+	h1, h2, p {
+		text-shadow: 2px 2px 1px #666;
+		@include breakpoint(small) {
+			text-align: center !important;
+		}
+	}
+	.solid-bg {
+		background: $hoki;
+		padding-top: 1em;
+		padding-right: 1.5em;
+	}
+}
+
+// bug: 1000005: Garish hero image. Please changes.
+.gray-bg {
+	background: url(../images/m-1400.jpg) center center no-repeat;
+	background-size: cover;
+	color: white;
+	h1, h2, p {
+		text-shadow: none;
+		@include breakpoint(small) {
+			text-align: center !important;
+		}
+	}
+	.solid-bg {
+		background: $hoki;
+		padding-top: 1em;
+		padding-right: 1.5em;
+	}
+}
+
+

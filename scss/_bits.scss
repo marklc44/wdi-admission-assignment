@@ -1,0 +1,64 @@
+//----Colors
+
+$trans-gray-drk: rgba(40,40,40,0.8);
+// Reds
+$tall-poppy: rgba(192,57,43,1.0);
+$red-brick: rgba(150,40,27,1.0);
+// Blues
+$jacksons-purple: rgba(31,58,147,1.0);
+$shakespeare: rgba(82,179,217,1.0);
+$pickled-bluewood: rgba(52,73,94,1.0);
+$hoki: rgba(103,128,159,1.0);
+// Grays
+$concrete: rgba(149, 165, 166,1.0);
+$clouds: rgba(236, 240, 241,1.0);
+$pumice: rgba(210,215,211,1.0);
+// Purples
+$wysteria: rgba(142, 68, 173,1.0);
+$amethyst: #9b59b6;
+$plum: rgba(145,61,136,1.0);
+// Lt Orange/tans
+$casa-blanca: rgba(244,179,80,1.0);
+$crusta: rgba(242,120,75,1.0);
+$lt-tan: rgba(200, 150, 100, 1.0);
+//Oranges
+$burnt-orange: rgba(211,84,0,1.0);
+$pumpkin: rgba(211, 84, 0,1.0);
+$carrot: rgba(230, 126, 34,1.0);
+$orange1: rgba(243, 156, 18,1.0);
+$orange: rgba(248,202,0,1.0);
+//Yellows
+$lightning-yellow: rgba(245,171,53,1.0);
+$saffron:rgba(244,208,63,1.0);
+// Greens
+$salem-green: rgba(30,130,76,1.0);
+$observatory: rgba(4,147,114,1.0);
+$green_sea: rgba(22, 160, 133,1.0);
+$ming: rgba(51,110,123,1.0);
+
+// $brand-color:;
+// $nav-color:;
+// $nav-hover-color:;
+
+
+//----Media Queries
+@mixin breakpoint($point) {
+	@if $point == xsmall {
+		@media (max-width: 480px) {@content;}
+	}
+	@else if $point == small {
+		@media (max-width: 767px) {@content;}
+	}
+	@else if $point == medium {
+		@media (max-width: 768px) and (min-width: 979px) {@content;}
+	}
+	@else if $point == large {
+		@media (min-width: 1200px) {@content;}
+	}
+}
+
+@mixin fixed {
+	position:fixed;
+}
+
+

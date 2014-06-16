@@ -1,0 +1,116 @@
+// Navigation Styles
+
+.navbar {
+	background: $hoki;
+	border-bottom: 2px solid $hoki;;
+	height: 75px;
+	box-shadow: 0 1px 2px #666;
+}
+.navbar .container {
+	padding-top: 20px;
+}
+.navbar-inverse .navbar-nav > li > a:hover, 
+.navbar-inverse .navbar-nav > li > a:focus {
+	color: $saffron;
+	background: darken($hoki, 3%);
+}
+
+.navbar-inverse .navbar-toggle {
+	border-color: lighten($hoki, 30%);
+	background: $hoki;
+	&:hover {
+		background: darken($hoki, 30%);
+	}
+	&:focus {
+		background: $hoki;
+	}
+	&:visited {
+		background: $hoki;
+	}
+}
+
+.navbar.navbar-inverse .navbar-collapse.collapse.in {
+	box-shadow: 2px 2px 6px darken($hoki, 30%);
+	@include breakpoint(small) {
+		background: $hoki;
+		text-align: center;
+		font-size: 2em;
+		border-top-color: lighten($hoki, 30%);
+		li {
+			margin-bottom: 2.5%;
+		}
+	}
+}
+.menu-item {
+	overflow: hidden;
+	&.current_page_item {
+		background: lighten($casa-blanca, 20%);
+	}
+	.sub-menu {
+		list-style-type: none;
+		padding:0;
+		height: 0;
+		transitition: height 1s ease;
+		-webkit-transitition: height 1s ease;
+		-moz-transitition: all .25s ease;
+		-ms-transitition: all .25s ease;
+	}
+	&:hover {
+		overflow: visible;
+		.sub-menu {
+			height: auto;
+			background: lighten($casa-blanca, 20%);
+			padding: 12px;
+			position: absolute;
+			top: 46px;
+			left: 0;
+			li {
+				margin: 10px 5px 5px 0;
+				a {
+					color: #888;
+					&:hover {
+						color: #eee;
+					}
+				}
+			}
+		}
+	}
+}
+.current-menu-item a {
+	background: darken($hoki,3%);
+}
+.single-post li.menu-item {
+	text-align: center;
+}
+.btn-contact {
+	margin-top: 14px;
+	margin-left: 10px;
+	background: none;
+	font-size: 14px;
+	color: white;
+	border-radius: 8px;
+	border: 1px solid white;
+	&:hover {
+		background: none;
+		color: $saffron;
+		border-color: $saffron;
+	}
+	@include breakpoint(small) {
+		margin-top: 10px;
+		margin-bottom: 20px;
+		margin-left: 0;
+		font-size: 1em;
+	}
+}
+span.logo {
+	display: block;
+	height: 40px;
+	width: 40px;
+	border: 4px solid white;
+	border-radius: 50%;
+	text-align: center;
+	margin-top: -10px;
+	margin-right: 10px;
+	float: left;
+	line-height: 30px;
+}

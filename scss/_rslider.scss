@@ -1,0 +1,84 @@
+/*
+ * Visible Nearby Image Slider
+ * -------------------------------------------------
+ */
+
+ .visibleNearby {
+  width: 100%;
+  background: #eee;
+  color: #FFF;
+  padding-top: 25px;
+}
+.visibleNearby .rsGCaption {
+  font-size: 16px;
+  line-height: 18px;
+  padding: 12px 0 16px;
+  background: #eee;
+  width: 100%;
+  position: static;
+  float: left;
+  left: auto;
+  bottom: auto;
+  text-align: center;
+}
+.visibleNearby .rsGCaption span {
+  display: block;
+  clear: both;
+  color: #888;
+  font-size: 14px;
+  line-height: 22px;
+}
+.rsSlide, .rsActiveSlide, .rsContainer {
+	background: none !important;
+}
+
+#rslider {
+  margin-top: 0;
+	margin-bottom: 25px;
+	background: darken($clouds, 10%);
+  @include breakpoint(small) {
+    margin-bottom: 0;
+  }
+}
+.rsDefault, .rsDefault .rsOverflow, .rsDefault .rsSlide, .rsDefault .rsVideoFrameHolder, .rsDefault .rsThumbs {
+	background: darken($clouds, 10%);
+}
+
+/* Scaling transforms */
+.visibleNearby .rsSlide img {
+  opacity: 0.45;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+
+  -webkit-transform: scale(0.9);  
+  -moz-transform: scale(0.9); 
+  -ms-transform: scale(0.9);
+  -o-transform: scale(0.9);
+  transform: scale(0.9);
+}
+.visibleNearby .rsActiveSlide img {
+  opacity: 1;
+  -webkit-transform: scale(1);  
+  -moz-transform: scale(1); 
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+}
+
+/* Non-linear resizing on smaller screens */
+@media screen and (min-width: 0px) and (max-width: 900px) { 
+  #rslider {
+    padding: 12px 0 12px;
+  }
+  #rslider .rsOverflow,
+  .royalSlider#gallery-1 {
+    height: 400px !important;
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 500px) { 
+  #rslider .rsOverflow,
+  .royalSlider#gallery-1 {
+    height: 300px !important;
+  }
+}

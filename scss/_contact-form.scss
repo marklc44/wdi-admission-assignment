@@ -1,0 +1,19 @@
+.modal.contact-form {
+	.modal-header {
+		background: $hoki;
+		font-family: $brand;
+		color: white;
+	}
+	.modal-body {
+		background: $clouds;
+		text-align: left;
+		.block-style {
+			display: block;
+		}
+	}
+	.modal-footer {
+		background: $clouds;
+		margin-top: 0;
+	}
+	
+}

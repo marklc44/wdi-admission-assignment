@@ -1,0 +1,26 @@
+section {
+	margin:0;
+}
+
+.page-template-single-page-site-php .container {
+	width: 100%;
+	margin: 0;
+}
+.page-template-single-page-site-php section {
+	padding-bottom: 100px;
+}
+
+section.blog,
+section.about {
+	padding-bottom: 50px;
+}
+
+.single-page-sections {
+	.row:first-child {
+		margin-top: 40px;
+		border-top: 2px solid #ccc;
+		&:first-child {
+			border-top: none;
+		}
+	}
+}

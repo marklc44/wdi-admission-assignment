@@ -1,0 +1,42 @@
+.footer {
+	background: darken($hoki, 20%);
+	color: white;
+	padding-top: 15px;
+}
+
+.footer .social-media {
+	text-align: right;
+	a {
+		display: inline-block;
+		margin-right: 10px;
+		font-size: 1.6em;
+		&:hover {
+			text-decoration: none;
+		}
+		&:last-of-type {
+			margin-right: none;
+		}
+		&.email {
+			font-size: 1em;
+		}
+	}
+}
+
+.contact-form .social-media {
+	text-align: left;
+	a {
+		display: inline-block;
+		margin-right: 10px;
+		font-size: 1.6em;
+		&:hover {
+			text-decoration: none;
+		}
+		&:last-of-type {
+			margin-right: none;
+		}
+		&.email {
+			font-size: 1em;
+		}
+	}
+}
+

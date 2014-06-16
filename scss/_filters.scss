@@ -1,0 +1,64 @@
+/*
+ * Filters
+ * ------------------------------------------------
+ */
+
+ @mixin filterHover($color) {
+ 	background: $color;
+ 	transition: background-color .25s ease;
+ 	-webkit-transition: background-color .25s ease;
+ 	-moz-transition: background-color .25s ease;
+ 	-ms-transition: background-color .25s ease;
+ 	&:hover {
+		background: lighten($color, 20%);
+ 	}
+ }
+
+ .filters {
+ 	margin-bottom: 20px;
+ }
+ .filters {
+ 	font-size: 24px;
+ 	.label {
+ 		cursor: pointer;
+ 		@include filterHover(#999);
+ 	}
+ 	.label.web-app {
+		@include filterHover($tall-poppy);
+ 	}
+ 	.label.website {
+ 		@include filterHover($jacksons-purple);
+ 	}
+ 	.label.features {
+ 		@include filterHover($jacksons-purple);
+ 	}
+ 	.label.hand-lettering {
+ 		@include filterHover($tall-poppy);
+ 	}
+ 	.label.specials {
+ 		@include filterHover($pumpkin);
+ 	}
+ 	.label.wdi {
+ 		@include filterHover($observatory);
+ 	}
+ 	.label.email {
+ 		@include filterHover($observatory);
+ 	}
+ }
+
+ .p-filters {
+ 	margin-bottom: 20px;
+ }
+ .p-filters {
+ 	font-size: 24px;
+ 	.label {
+ 		cursor: pointer;
+ 		@include filterHover(#999);
+ 	}
+ 	.label.web-app {
+		@include filterHover($tall-poppy);
+ 	}
+ 	.label.website {
+ 		@include filterHover($jacksons-purple);
+ 	}
+ }

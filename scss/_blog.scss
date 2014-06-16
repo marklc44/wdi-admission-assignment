@@ -1,0 +1,167 @@
+
+
+$project-padding: 6px;
+
+.page .blog .image-wrapper {
+	max-width:100%;
+	max-height: 260px;
+	overflow: hidden;
+}
+
+.single-post .featured-image {
+	float: none;
+}
+
+.featured-image img,
+.portfolio-image img {
+	max-width: 100%;
+}
+
+.blog .row {
+	margin-bottom: 15px;
+}
+.blog .post {
+	overflow: hidden;
+	height: auto;
+	clear: both;
+	margin-bottom: 2.5%;
+}
+
+.blog-post {
+	position: relative;
+	transition: all .5s ease;
+	-webkit-transition: all .5s ease;
+	-moz-transition: all .5s ease;
+	-ms-transition: all .5s ease;
+	h3.title {
+		position: absolute;
+		top: -20px;
+		left: 15px;
+		max-width: 66%;
+		background: $pickled-bluewood;
+		padding: $project-padding;
+		font-size: 24px;
+		z-index: 999;
+
+		a {
+			color: white;
+		}
+	}
+	&.hidden {
+		height: 0;
+		width: 0;
+	}
+	.excerpt {
+		margin-top: 15px;
+	}
+}
+
+.blog .image-wrapper {
+	position: relative;
+	a {
+		display: block;
+	}
+	img {
+		min-width: 100%;
+		min-height: 100%;
+	}
+}
+
+.post .featured-image {
+	float: left;
+	width: 25%;
+	height: 25%;
+	box-shadow: 4px 4px 0 $hoki;
+	margin: 0 20px 10px 0;
+	overflow: hidden;
+	background: darken($clouds, 10%);
+	img {
+		width: 100%;
+		height: 200px;
+		@include breakpoint(small) {
+			height: none;
+		}
+	}
+	@include breakpoint(small) {
+		float: none;
+		margin: 2.5% auto;
+		width: 95%;
+		height: 100px;
+		overflow: hidden;
+	}
+}
+
+
+.blog {
+	.meta {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		max-width: 50%;
+		.category {
+			clear: right;
+			float: right;
+			font-size: 18px;
+			background: $jacksons-purple;
+			padding: $project-padding;
+			text-align: right;
+			max-width: 100%;
+			color: white;
+			a {
+				color: white;
+			}
+			&.design {
+				background: $jacksons-purple;
+			}
+			&.hand-lettering {
+				background: $tall-poppy;
+			}
+			&.front-end-development {
+				background: $pumpkin;
+			}
+			&.bloc {
+				background: $observatory;
+			}
+		}
+	}
+	.byline {
+		color: $hoki;
+		font-style: oblique;
+		size: .8em;
+	}
+
+}
+
+.single-post {
+	text-align: center;
+	h1, h2, h3, h4, p, ul, li { text-align: left; }
+	.post-meta {
+		border-bottom: 1px solid darken($clouds, 10%);
+		padding-bottom: 5px;
+	}
+	.featured-image {
+		float: none;
+		text-align: center;
+		img { margin: 0 auto; }
+		@include breakpoint(small) {
+			float: none;
+			margin: 10px auto;
+			width: 100%;
+		}
+	}
+}
+
+input[value='Submit Comment'] {
+	border-radius: 6px;
+	outline: 0;
+	box-shadow: none;
+	color: white;
+	padding: 5px 10px;
+	&:hover {
+		background: #888;
+	}
+}
+.related-posts a {
+	font-size: 1.5em;
+}
+
