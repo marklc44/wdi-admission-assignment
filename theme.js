@@ -33,8 +33,7 @@ jQuery(document).ready(function ( $ ) {
 
     // filter with shuffle
     function filterItems($container, $filterEl) {
-      $filterEl.click(function(e) {
-        e.preventDefault();
+      $filterEl.click(function() {
         var filter = $(this).attr('data-filter');
 
         $container.shuffle('shuffle', function($el, shuffle) {
@@ -44,7 +43,7 @@ jQuery(document).ready(function ( $ ) {
     }
 
     // custom nav collapsing
-
+    // bug 1000006 nav items flash before the background gets added
     $('.navbar-toggle').click(function() {
       var $fade = $('body').find('.bg-fade');
       var bodyHeight = $('body').height();
@@ -56,6 +55,8 @@ jQuery(document).ready(function ( $ ) {
         $('.bg-fade').css('height', bodyHeight);
       }   
     });
+    // uses live to detect the #bg-fade div that is created
+    // after the page loads
     $('#bg-fade').live('click', function() {
       $('.navbar-collapse').removeClass('in');
       $(this).remove(); 
@@ -63,6 +64,9 @@ jQuery(document).ready(function ( $ ) {
 
     // custom slider 
     // added for GA WDI Admissions Assignment
+    // the slider is responsive
+    // but adding it broke responsiveness of the jumbotron testimonial
+    // revisit
 
     var $images = $('.slider').find('img');
     var $slider = $('#custom-slider');
@@ -73,16 +77,17 @@ jQuery(document).ready(function ( $ ) {
     var imgWidth = $('body').width();
     var numOfSlides = $sliderInner.find('img').length;
 
+    // hide previous button
+    $previous.addClass('hidden');
+
     // set sliderInner and image width to full width of body
     $sliderInner.css({
       'width': imgWidth * 3 + 'px'
     });
     $sliderInner.find('img').css('width', imgWidth);
 
-    // hide previous button
-    $previous.addClass('hidden');
-
     // if the window is resized, reset sliderInner and image width
+    // use debounce here?
     $(window).resize(function() {
       imgWidth = $('body').width();
       $sliderInner.css({
@@ -109,6 +114,7 @@ jQuery(document).ready(function ( $ ) {
     // on clicking next, 
     // if currentPosition is less than the number of slides
     // slide $slider left by the width of one image
+    // next version of this use RAF + translate to do animation
     $next.click(function() {
       if(currentPosition < numOfSlides) {
         $sliderInner.animate({ 
@@ -138,7 +144,7 @@ jQuery(document).ready(function ( $ ) {
 
 // Smooth Scrolling
 // From CSS Tricks: http://css-tricks.com/snippets/jquery/smooth-scrolling/
-// Added extra 48px of offset to accommodate margins and padding
+// Added extra 48px of offset to accommodate margins and padding on headings
 
 jQuery(function( $ ) {
   $('a[href*=#]:not([href=#])').click(function() {
