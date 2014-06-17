@@ -222,7 +222,13 @@ section.about {
 .jumbotron {
   background: white;
   margin-bottom: 0;
-  color: #666; }
+  color: #666;
+  padding: 0; }
+  .jumbotron .container.pull-top {
+    margin-top: -500px;
+    z-index: 99; }
+    .jumbotron .container.pull-top h1, .jumbotron .container.pull-top h2 {
+      z-index: 999; }
   @media (max-width: 767px) {
     .jumbotron .container {
       width: 100%; }
@@ -271,8 +277,6 @@ section.about {
     padding-right: 1.5em; }
 
 .gray-bg {
-  background: url(../images/m-1400.jpg) center center no-repeat;
-  background-size: cover;
   color: white; }
   .gray-bg h1, .gray-bg h2, .gray-bg p {
     text-shadow: none; }
@@ -283,6 +287,9 @@ section.about {
     background: #67809f;
     padding-top: 1em;
     padding-right: 1.5em; }
+    @media (max-width: 767px) {
+      .gray-bg .solid-bg {
+        width: 80%; } }
 
 /*
  * Filters
@@ -793,15 +800,15 @@ input[value='Submit Comment'] {
 .custom-slider {
   overflow: hidden;
   width: 100%;
-  max-height: 503px;
   overflow: hidden;
   position: relative;
-  min-height: 466px; }
+  min-height: 525px; }
   .custom-slider .slider-inner {
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
+    min-height: 525px;
     overflow: hidden;
     transition: all 1s ease;
     -webkit-transition: all 1s ease; }
