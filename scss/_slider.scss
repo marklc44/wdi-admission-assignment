@@ -1,0 +1,50 @@
+// custom image slider styles
+
+.custom-slider {
+	overflow: hidden;
+	width: 100%;
+	max-height: 503px;
+	overflow: hidden;
+	position: relative;
+	min-height: 466px;
+	.slider-inner {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		overflow: hidden;
+		transition: all 1s ease;
+		-webkit-transition: all 1s ease;
+	}
+	div.control {
+		position: absolute;
+		cursor: pointer;
+		z-index: 9;
+		transition: all 1s ease;
+		-webkit-transition: all 1s ease;
+		span.glyphicon {
+			color: white;
+			height: 30px;
+			width: 30px;
+			font-size: 30px;
+			&:hover {
+				color: $hoki;
+			}
+			
+		}
+		&.previous {
+			top: 233px;
+			left: 10px;
+		}
+		&.next {
+			top: 233px;
+			right: 10px;
+		}
+	}
+		
+	img {
+		display: block;
+		float: left;
+		margin: 0;
+	}
+}

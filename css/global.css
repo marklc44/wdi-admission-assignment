@@ -790,6 +790,45 @@ input[value='Submit Comment'] {
     .contact-form .social-media a.email {
       font-size: 1em; }
 
+.custom-slider {
+  overflow: hidden;
+  width: 100%;
+  max-height: 503px;
+  overflow: hidden;
+  position: relative;
+  min-height: 466px; }
+  .custom-slider .slider-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    overflow: hidden;
+    transition: all 1s ease;
+    -webkit-transition: all 1s ease; }
+  .custom-slider div.control {
+    position: absolute;
+    cursor: pointer;
+    z-index: 9;
+    transition: all 1s ease;
+    -webkit-transition: all 1s ease; }
+    .custom-slider div.control span.glyphicon {
+      color: white;
+      height: 30px;
+      width: 30px;
+      font-size: 30px; }
+      .custom-slider div.control span.glyphicon:hover {
+        color: #67809f; }
+    .custom-slider div.control.previous {
+      top: 233px;
+      left: 10px; }
+    .custom-slider div.control.next {
+      top: 233px;
+      right: 10px; }
+  .custom-slider img {
+    display: block;
+    float: left;
+    margin: 0; }
+
 body {
   background: #ecf0f1; }
 
