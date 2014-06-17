@@ -1,6 +1,0 @@
-1000000: must hardcode links in admin panel > menus for header-menu-alt. Programatically add links to home page IDs.
-1000001: Shuffle.js on IE < 10 projects and blog posts listed in one column. Generated translateX = 0, so all items are pulled to left.
-1000002: Refactor JS.
-1000003: Too many favicon icons slowing down loading.
-1000004: jQuery loaded multiple times and loading in the head by Wordpress. Slowing loading.
-1000005: Garish hero image. Please change.

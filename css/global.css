@@ -85,7 +85,7 @@ h3.project-title {
   font-style: oblique; }
 
 /*
-  Social Media Icon Font
+	Social Media Icon Font
 */
 @font-face {
   font-family: 'socicon';
@@ -569,13 +569,20 @@ section.about {
 .visibleNearby .rsSlide img {
   opacity: 0.45;
   -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
   -webkit-transform: scale(0.9);
+  -moz-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  -o-transform: scale(0.9);
   transform: scale(0.9); }
 
 .visibleNearby .rsActiveSlide img {
   opacity: 1;
   -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
   transform: scale(1); }
 
 /* Non-linear resizing on smaller screens */
@@ -814,7 +821,7 @@ body {
   margin-top: 100px; }
 
 /*
-  Fix mobile safari click event bubbling
+	Fix mobile safari click event bubbling
 */
 .clickable {
   cursor: pointer; }
