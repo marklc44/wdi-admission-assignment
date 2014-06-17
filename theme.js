@@ -61,6 +61,79 @@ jQuery(document).ready(function ( $ ) {
       $(this).remove(); 
     });
 
+    // custom slider 
+    // added for GA WDI Admissions Assignment
+
+    var $images = $('.slider').find('img');
+    var $slider = $('#custom-slider');
+    var $next = $('.next');
+    var $previous = $('.previous');
+    var $sliderInner = $('.slider-inner');
+    var currentPosition = 1;
+    var imgWidth = $('body').width();
+    var numOfSlides = $sliderInner.find('img').length;
+
+    // set sliderInner and image width to full width of body
+    $sliderInner.css({
+      'width': imgWidth * 3 + 'px'
+    });
+    $sliderInner.find('img').css('width', imgWidth);
+
+    // hide previous button
+    $previous.addClass('hidden');
+
+    // if the window is resized, reset sliderInner and image width
+    $(window).resize(function() {
+      imgWidth = $('body').width();
+      $sliderInner.css({
+        'width': imgWidth * 3 + 'px'
+      });
+      $sliderInner.find('img').css('width', imgWidth);
+    });
+
+    // hide next control when on the last slide
+    // hide previous control when on the first image
+    function showControls() {
+      if(currentPosition == numOfSlides) {
+        $next.addClass('hidden');
+      } else {
+        $next.removeClass('hidden');
+      }
+      if(currentPosition == 1) {
+        $previous.addClass('hidden');
+      } else {
+        $previous.removeClass('hidden');
+      }
+    } 
+
+    // on clicking next, 
+    // if currentPosition is less than the number of slides
+    // slide $slider left by the width of one image
+    $next.click(function() {
+      if(currentPosition < numOfSlides) {
+        $sliderInner.animate({ 
+          left: -1 * currentPosition * imgWidth
+        });
+        currentPosition++;
+        showControls();
+        console.log(currentPosition);
+      } 
+    });
+
+    // on clicking previous
+    // if currentPosition is greater than 1
+    // slide $slider right by the width of one image
+    $previous.click(function() {
+      if(currentPosition > 1) {
+        var posLeft = $sliderInner.offset().left;
+        $sliderInner.animate({ 
+          left: posLeft+imgWidth
+        });
+        currentPosition--;
+        showControls();
+        console.log(currentPosition);
+      } 
+    });
 });
 
 // Smooth Scrolling
